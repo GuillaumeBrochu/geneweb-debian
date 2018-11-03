@@ -201,6 +201,22 @@ fr: Consang
 en: Update_nldb
 fr: Update_nldb
 
+    About geneweb-gui
+en: About geneweb-gui
+fr: À propos de geneweb-gui
+
+    Unlike geneweb and gwsetup, geneweb-gui is designed to work with bases stored in your home folder.
+en: Unlike geneweb and gwsetup, geneweb-gui is designed to work with bases stored in your home folder.
+fr: Contrairement à geneweb et gwsetup, geneweb-gui est conçu pour fonctionner avec des bases rangées dans votre dossier personnel.
+
+    It is not recommended to use the bases stored in /var/lib/geneweb with geneweb-gui.
+en: It is not recommended to use the bases stored in /var/lib/geneweb with geneweb-gui.
+fr: Il est déconseillé d'utiliser les bases contenues dans /var/lib/geneweb avec geneweb-gui.
+
+    It is also not recommended to use ports 2316 or 2317 that are already used by the geneweb and gwsetup daemons.
+en: It is also not recommended to use ports 2316 or 2317 that are already used by the geneweb and gwsetup daemons.
+fr: Il est également déconseillé d'utiliser les ports 2316 ou 2317 qui sont déjà utilisés par les services geneweb et gwsetup.
+
     Your configuration file is:
 en: Your configuration file is:
 fr: Votre fichier de configuration est:

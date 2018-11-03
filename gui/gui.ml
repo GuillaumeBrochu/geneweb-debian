@@ -14,14 +14,17 @@ type conf =
     waiting_pids : mutable list int }
 ;
 
-value bin_dir =
-  let path = Filename.dirname (Sys.argv.(0)) in
-  if Filename.is_relative path then
-    Filename.concat (Sys.getcwd ()) path
-  else path
+value bin_dir = "/usr/bin";
+
+value share_dir = "/usr/share/geneweb";
+
+value home_dir =
+  try Sys.getenv "HOME" with
+  [ Not_found ->
+    Sys.getcwd ()]
 ;
 
-value share_dir = bin_dir;
+value assistant_default_bases_dir = home_dir;
 
 value trace = ref False;
 
@@ -34,9 +37,10 @@ value default_lang =
 
 value lang = ref default_lang;
 value lexicon_mtime = ref 0.0;
-value lexicon_file = Filename.concat bin_dir "gui_lex.txt";
 
-value config_gui_file = Filename.concat bin_dir "config.txt";
+value lexicon_file = Filename.concat share_dir "lang/gui_lex.txt";
+
+value config_gui_file = Filename.concat home_dir ".geneweb-gui-config.txt";
 
 (**/**) (* Gestion du dictionnaire des langues pour GUI. *)
 
@@ -255,7 +259,7 @@ value config_browser () =
     [ "Win32" | "Cygwin" ->
         ["C:\\Program Files\\Mozilla Firefox\\firefox.exe";
          "C:\\Program Files\\Internet Explorer\\iexplore.exe"]
-    | _ -> ["/usr/bin/firefox"; "/usr/bin/mozilla"] ]
+    | _ -> ["/usr/bin/x-www-browser"] ]
   in
   match List.filter Sys.file_exists default_browsers with
   [ [] -> None
@@ -1290,7 +1294,13 @@ value launch_config () =
     let page_0 = GMisc.label
       ~text:(transl "This assistant will help you to setup GeneWeb") ()
     in
-    let bases_dir = ref "" in
+    let page_0b = GMisc.label
+      ~text:(transl "Unlike geneweb and gwsetup, geneweb-gui is designed to work with bases stored in your home folder." ^ "\n\n" ^
+             transl "It is not recommended to use the bases stored in /var/lib/geneweb with geneweb-gui." ^ "\n\n" ^
+             transl "It is also not recommended to use ports 2316 or 2317 that are already used by the geneweb and gwsetup daemons." )
+      ~line_wrap:True ()
+    in
+    let bases_dir = ref assistant_default_bases_dir in
     let page_1 = GPack.hbox ~spacing:5 () in
     let _label = GMisc.label
       ~text:(transl "select bases directory")
@@ -1312,7 +1322,7 @@ value launch_config () =
            let num = assistant#current_page in
            let page = assistant#nth_page num in
            assistant#set_page_complete page (bases_dir.val <> "") }));
-    let port = ref 2317 in
+    let port = ref 2315 in (*to avoid conflicts with port 2317*)
     let page_2 = GPack.hbox ~homogeneous:False ~spacing:5 () in
     let _label = GMisc.label
       ~text:(transl "enter port")
@@ -1376,6 +1386,12 @@ value launch_config () =
          ~page_type:`INTRO
          ~complete:True
          page_0#as_widget);
+    ignore
+      (assistant#append_page
+         ~title:(transl "About geneweb-gui")
+         ~page_type:`CONTENT
+         ~complete:True
+         page_0b#as_widget);
     ignore
       (assistant#append_page
          ~title:(transl "Setup bases directory")
