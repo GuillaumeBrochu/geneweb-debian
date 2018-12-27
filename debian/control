@@ -56,7 +56,6 @@ Description: utilities to configure and manipulate Geneweb databases
 
 Package: geneweb-gui
 Architecture: any
-Pre-Depends: adduser
 Depends: ${misc:Depends}, ${shlibs:Depends}, geneweb
 Description: graphical user interface to Geneweb genealogy software
  Geneweb allows keeping track of ancestral data. It is a powerful
