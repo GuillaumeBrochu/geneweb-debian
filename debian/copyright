@@ -4,11 +4,17 @@ Source: https://github.com/geneweb/geneweb/tree/distrib-6-08-ocaml-4-xx
 Files-Excluded: hd/etc/jquery*.js
 
 Files: *
-Copyright: Copyright © 1998-2008 INRIA
+Copyright: © 1998-2016 INRIA (Institut National de Recherche en Informatique
+                             et Automatique)
+License: GPL-2
+
+Files: contrib/gwdiff/*
+Copyright: © 2001 Ludovic LEDIEU
 License: GPL-2
 
 Files: debian/*
-Copyright: (C) 2000-2018 Christian Perrier <bubulle@debian.org>, 2016-2018 Guillaume Brochu <guillaume.brochu@gmail.com>
+Copyright: © 2000-2018 Christian Perrier <bubulle@debian.org>
+           © 2016-2018 Guillaume Brochu <guillaume.brochu@gmail.com>
 License: GPL-2
 
 License: GPL-2
