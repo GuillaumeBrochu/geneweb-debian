@@ -12,7 +12,7 @@ Vcs-Browser: https://salsa.debian.org/GuillaumeBrochu-guest/geneweb
 Package: geneweb
 Architecture: any
 Depends: ${shlibs:Depends}, lsb-base (>= 3.0-6), libjs-jquery, libjs-jquery-placeholder
-Pre-Depends: ${misc:Depends}, iso-codes, isoquery, adduser, dpkg (>= 1.15.6~)
+Pre-Depends: ${misc:Depends}, iso-codes, isoquery, adduser
 Suggests: gwtp, gwsetup, www-browser, geneweb-gui
 Description: genealogy software with web interface
  Geneweb allows keeping track of ancestral data. It is a powerful
@@ -25,7 +25,6 @@ Description: genealogy software with web interface
 Package: gwtp
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, geneweb
-Pre-Depends: dpkg (>= 1.15.6~)
 Suggests: httpd
 Description: web interface interacting with Geneweb databases
  Geneweb allows keeping track of ancestral data. It is a powerful
@@ -41,7 +40,7 @@ Description: web interface interacting with Geneweb databases
 
 Package: gwsetup
 Architecture: any
-Pre-Depends: adduser, dpkg (>= 1.15.6~)
+Pre-Depends: adduser
 Depends: ${misc:Depends}, ${shlibs:Depends}, geneweb, lsb-base (>= 3.0-6)
 Description: utilities to configure and manipulate Geneweb databases
  Geneweb allows keeping track of ancestral data. It is a powerful
@@ -57,7 +56,7 @@ Description: utilities to configure and manipulate Geneweb databases
 
 Package: geneweb-gui
 Architecture: any
-Pre-Depends: adduser, dpkg (>= 1.15.6~)
+Pre-Depends: adduser
 Depends: ${misc:Depends}, ${shlibs:Depends}, geneweb
 Description: graphical user interface to Geneweb genealogy software
  Geneweb allows keeping track of ancestral data. It is a powerful
