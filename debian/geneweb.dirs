@@ -1,13 +1,4 @@
-usr/bin
-usr/share/man/man1
-usr/share/doc/geneweb
-usr/share/doc/geneweb/examples
-usr/share/geneweb/images
-usr/share/geneweb/lang
-usr/share/geneweb/etc
-usr/share/pixmaps
 var/lib/geneweb
 var/lib/geneweb/images
 var/lib/geneweb/etc
 var/lib/geneweb/cnt
-
