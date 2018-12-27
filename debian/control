@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Guillaume Brochu <guillaume.brochu@gmail.com>
 Uploaders: Christian Perrier <bubulle@debian.org>
 Standards-Version: 4.3.0
-Build-Depends: debhelper (>= 10~), ocaml-nox (>= 4.02), camlp5, doc-base, dh-buildinfo, iso-codes, isoquery, po-debconf, liblablgtk2-ocaml-dev, ocaml-findlib
+Build-Depends: debhelper-compat (= 11), ocaml-nox (>= 4.02), camlp5, doc-base, dh-buildinfo, iso-codes, isoquery, po-debconf, liblablgtk2-ocaml-dev, ocaml-findlib
 Homepage: https://geneweb.org
 Vcs-Git: https://salsa.debian.org/GuillaumeBrochu-guest/geneweb.git
 Vcs-Browser: https://salsa.debian.org/GuillaumeBrochu-guest/geneweb
