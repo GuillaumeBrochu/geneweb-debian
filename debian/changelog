@@ -10,6 +10,7 @@ geneweb (6.08+git20181019+dfsg-1) unstable; urgency=medium
   * New maintainer (Guillaume Brochu), Christian Perrier now in uploaders
   * New git repository to replace Alioth:
     https://salsa.debian.org/GuillaumeBrochu-guest/geneweb
+  * Fix debian/copyright
   * Build and add connex to geneweb package (renamed geneweb-connex)
     Closes: #912915
   * Use upstream a.gwf as default.gwf for gwtp
@@ -18,10 +19,12 @@ geneweb (6.08+git20181019+dfsg-1) unstable; urgency=medium
   * Remove duplicate entries in changelog (that were there since May 2007)
   * Add override_dh_auto_configure to fix a problem
     that appeared with debhelper 11.5
-  * Standards-Version: 4.2.1
-  * Debhelper Build-Depends 9 -> 10
+  * Standards-Version: 4.3.0
+  * Debhelper Build-Depends 9 -> 11, use debhelper-compat
+  * Remove Pre-Depends on dpkg (>= 1.15.6~)
   * Build-Depends: Replace ocaml-best-compilers and ocaml by ocaml-nox
   * Remove lynx in Suggests of geneweb
+  * Remove adduser in Pre-Depends of geneweb-gui
   * Add Keywords entry to .desktop files, correct translation mistake
   * Put icons in usr/share/pixmaps
   * Update isoquery standard : use 639-2 instead of 639
@@ -30,7 +33,7 @@ geneweb (6.08+git20181019+dfsg-1) unstable; urgency=medium
   * Cleaning of .docs, .dirs, .links, .prerm, and rules
   * Other minor changes (lintian warnings, gbp.conf, etc.)
 
- -- Guillaume Brochu <guillaume.brochu@gmail.com>  Sun, 11 Nov 2018 09:09:00 -0500
+ -- Guillaume Brochu <guillaume.brochu@gmail.com>  Thu, 27 Dec 2018 12:25:00 -0500
 
 geneweb (6.08+git20180420+dfsg-2) unstable; urgency=medium
 
