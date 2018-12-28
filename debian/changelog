@@ -1,3 +1,13 @@
+geneweb (6.08+git20181019+dfsg-2) unstable; urgency=medium
+
+  * Fix a regression in the previous release in 0007-compile-gui.patch
+    to avoid build failures for some architectures
+  * Add a comment in debian/rules to remember how to test with WAY=out
+  * Remove Christian Perrier from Uploaders
+  * Lintian override for geneweb-connex (like other binaries)
+
+ -- Guillaume Brochu <guillaume.brochu@gmail.com>  Fri, 28 Dec 2018 15:01:00 -0500
+
 geneweb (6.08+git20181019+dfsg-1) unstable; urgency=medium
 
   * New upstream release:
