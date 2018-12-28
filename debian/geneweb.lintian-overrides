@@ -9,3 +9,4 @@ geneweb: hardening-no-fortify-functions usr/bin/gwc2
 geneweb: hardening-no-fortify-functions usr/bin/gwd
 geneweb: hardening-no-fortify-functions usr/bin/gwu
 geneweb: hardening-no-fortify-functions usr/bin/update_nldb
+geneweb: hardening-no-fortify-functions usr/bin/geneweb-connex
