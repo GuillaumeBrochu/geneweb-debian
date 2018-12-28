@@ -1,12 +1,12 @@
 From: Guillaume Brochu <guillaume.brochu@gmail.com>
-Date: Sat, 10 Nov 2018 21:15:18 -0500
+Date: Fri, 28 Dec 2018 14:55:18 -0500
 Subject: compile-gui
 
 compile gui and tweak makefile accordingly
 ---
  Makefile     |  6 ++++++
- gui/Makefile | 13 ++++---------
- 2 files changed, 10 insertions(+), 9 deletions(-)
+ gui/Makefile | 15 +++++----------
+ 2 files changed, 11 insertions(+), 10 deletions(-)
 
 diff --git a/Makefile b/Makefile
 index 54ac39a..29ccbed 100644
@@ -51,10 +51,10 @@ index 54ac39a..29ccbed 100644
  	cd gwtp; $(MAKE) depend
 +	cd gui; $(MAKE) depend
 diff --git a/gui/Makefile b/gui/Makefile
-index eda1316..af383a3 100644
+index eda1316..3f106c6 100644
 --- a/gui/Makefile
 +++ b/gui/Makefile
-@@ -2,14 +2,10 @@
+@@ -2,16 +2,12 @@
  # Copyright (c) 2006-2007 INRIA
  
  include ../tools/Makefile.inc
@@ -68,8 +68,11 @@ index eda1316..af383a3 100644
  OCAMLI=-I ../src -I $(LABLGTK2)
 -TEST_DIR=test $$(basename "$<") = "$<" || { echo "Please run 'make' in directory '$$(dirname "$<")' first"; exit 1; }
  
- all:: opt
+-all:: opt
++all:: out
  
+ out:: gui.out
+ 	$(RM) gui
 @@ -20,6 +16,7 @@ out:: gui.out
  opt:: gui.opt
  	$(RM) gui
