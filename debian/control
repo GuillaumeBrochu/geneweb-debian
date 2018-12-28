@@ -2,7 +2,6 @@ Source: geneweb
 Section: misc
 Priority: optional
 Maintainer: Guillaume Brochu <guillaume.brochu@gmail.com>
-Uploaders: Christian Perrier <bubulle@debian.org>
 Standards-Version: 4.3.0
 Build-Depends: debhelper-compat (= 11), ocaml-nox (>= 4.02), camlp5, doc-base, dh-buildinfo, iso-codes, isoquery, po-debconf, liblablgtk2-ocaml-dev, ocaml-findlib
 Homepage: https://geneweb.org
