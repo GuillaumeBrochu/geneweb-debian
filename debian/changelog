@@ -1,3 +1,13 @@
+geneweb (6.08+git20181019+dfsg-3) unstable; urgency=medium
+
+  * Remove -unsafe-string that is no longer needed for compilation.
+    Closes: #973190
+  * Remove select-with-translated-default-field in
+    geneweb.lintian-overrides
+  * Standards-Version: 4.5.0
+
+ -- Guillaume Brochu <guillaume.brochu@gmail.com>  Sat, 31 Oct 2020 19:35:00 -0400
+
 geneweb (6.08+git20181019+dfsg-2) unstable; urgency=medium
 
   * Fix a regression in the previous release in 0007-compile-gui.patch
