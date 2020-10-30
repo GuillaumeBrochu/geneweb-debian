@@ -1,5 +1,5 @@
 From: Guillaume Brochu <guillaume.brochu@gmail.com>
-Date: Sun, 21 Oct 2018 15:02:09 -0400
+Date: Fri, 30 Oct 2020 18:56:04 -0400
 Subject: Makefile.debian
 
 1. Add differentiated Makefile.debian files for optimized and non
@@ -20,20 +20,20 @@ available in Debian. See : https://github.com/geneweb/geneweb/commit/5fe0e0bccb3
 
 diff --git a/tools/Makefile.debian.opt b/tools/Makefile.debian.opt
 new file mode 100644
-index 0000000..1230922
+index 0000000..68c7894
 --- /dev/null
 +++ b/tools/Makefile.debian.opt
 @@ -0,0 +1,2 @@
-+OCAMLC=ocamlc.opt -unsafe-string
-+OCAMLOPT=ocamlopt.opt -unsafe-string
++OCAMLC=ocamlc.opt
++OCAMLOPT=ocamlopt.opt
 diff --git a/tools/Makefile.debian.out b/tools/Makefile.debian.out
 new file mode 100644
-index 0000000..ab9938f
+index 0000000..9b9dfe4
 --- /dev/null
 +++ b/tools/Makefile.debian.out
 @@ -0,0 +1,2 @@
-+OCAMLC=ocamlc -unsafe-string
-+OCAMLOPT=ocamlopt -unsafe-string
++OCAMLC=ocamlc
++OCAMLOPT=ocamlopt
 diff --git a/tools/Makefile.inc.unix b/tools/Makefile.inc.unix
 index 676eb99..ba53046 100644
 --- a/tools/Makefile.inc.unix
