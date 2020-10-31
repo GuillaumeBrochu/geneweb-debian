@@ -6,12 +6,14 @@ http://localhost:`cat /etc/default/geneweb |grep -e '^PORT'| cut -f2
 * Really deal with permissions : users should not be able to write
 other's databases
 
-* Support for the "status" init script argument is recommended.
-(since std-ver: 4.0.0)
+* Packages that include system services should include systemd service units to start or stop those services
+(since std-ver: 4.5.0)
+
+* Support for the "status" init script argument is encouraged.
+(since std-ver: 4.5.0)
 
 * Packages are recommended to use debhelper tools instead of invoking
 "update-rc.d" and "invoke-rc.d" directly.
 (since std-ver: 4.0.1)
   geneweb.postinst:208:   update-rc.d -f geneweb remove
   geneweb.logrotate:9:    invoke-rc.d geneweb force-reload >/dev/null
-
