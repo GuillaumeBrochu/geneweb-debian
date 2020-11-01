@@ -8,8 +8,6 @@ optimised compilation. The appropriate method is selected in debian/rules
 2. Remove "-warn-error A" to avoid future FTBFS on warnings.
 Example : #521674
 
-3. Use -unsafe-string until OCaml 4.06 and Lablgtk-2.18.6 are
-available in Debian. See : https://github.com/geneweb/geneweb/commit/5fe0e0bccb33befd56471dd40eaf44ead2f6fb8a
 ---
  tools/Makefile.debian.opt | 2 ++
  tools/Makefile.debian.out | 2 ++
